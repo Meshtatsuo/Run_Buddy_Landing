@@ -131,3 +131,18 @@ form p {
 }
 
 /*Hero End*/
+
+/*What We Do*/
+
+#what-we-do {
+  background-color: #fff;
+  margin: 0;
+  padding: 245px;
+}
+
+#what-we-do h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #024e76;
+}
