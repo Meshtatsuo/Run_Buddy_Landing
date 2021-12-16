@@ -183,6 +183,10 @@ form p {
   background: #fce138;
 }
 
+.steps div {
+  margin-bottom: 80px;
+}
+
 .steps img {
   width: 15%;
   margin: 10px 0;
