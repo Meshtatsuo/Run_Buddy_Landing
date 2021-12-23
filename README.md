@@ -11,7 +11,7 @@ A website that offers fitness training services.
 
 ## Website
 
-https://meshtatsuo.github.io/run-buddy-landing/
+https://meshtatsuo.github.io/Run_Buddy_Landing/
 
 ## Contribution
 
