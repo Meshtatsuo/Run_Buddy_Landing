@@ -99,6 +99,10 @@ section {
   text-align: right;
 }
 
+.rounded-box {
+  border-radius: 10px;
+}
+
 /*Hero Section*/
 .hero {
   background-image: url("../images/hero-bg.jpg");
@@ -106,6 +110,31 @@ section {
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+}
+
+.hero-flex {
+  flex: 50%;
+  padding: 25px;
+  margin: 0 auto;
+  align-content: space-between;
+  max-width: 35%;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  color: #fce138;
+  text-shadow: 1px 1px 10px #024e76;
+  text-align: right;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: white;
+  text-align: right;
+  line-height: 1.25;
 }
 
 /*Form Styling*/
@@ -115,9 +144,10 @@ section {
   width: 500px;
   color: #024e76;
   border: solid 3px #024e76;
-  position: absolute;
   bottom: 120px;
   right: 140px;
+  box-shadow: 1px 1px 25px #003552;
+  /*  position: absolute; <-- not needed */
 }
 /*Hero form title*/
 .hero-form h3 {
