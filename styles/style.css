@@ -16,7 +16,15 @@ header {
   background-color: #39a6b2;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;git
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 header h1 {
@@ -24,6 +32,7 @@ header h1 {
   font-size: 36px;
   color: #fce138;
   margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -34,13 +43,13 @@ header a {
 header nav {
   margin: 7px 0;
 }
-  header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-  }
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
 
 header nav ul li {
   display: inline;
@@ -50,6 +59,14 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* hover interactivity */
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
 }
 
 /* Footer styling  */
@@ -109,12 +126,11 @@ section {
   text-align: right;
 }
 
-.flex-row{
+.flex-row {
   display: flex;
 }
 
 .rounded-box {
-  border-radius: 10px;
 }
 
 /*Hero Section*/
@@ -122,36 +138,36 @@ section {
   background-image: url("../images/hero-bg.jpg");
   height: 600px;
   background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
-.hero-text{
-      width: 35%;
-    text-align: right;
-    margin: 3.5%;
-    color: #fff;
-    font-size: 18px;
-    line-height: 1.2;
+.hero-text {
+  width: 35%;
+  text-align: right;
+  margin: 3.5%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .hero-text h2 {
   font-size: 48px;
   color: #fce138;
-  text-shadow: 1px 1px 10px #024e76;
   text-align: right;
   font-style: italic;
   line-height: 1.25;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 
 /*Form Styling*/
 .hero-form {
-  background-color: #fce138;
+  background-color: rgba(252, 225, 56, 0.8);
   margin: 3.5%;
   padding: 20px;
   width: 40%;
@@ -159,7 +175,8 @@ section {
   border: solid 3px #024e76;
   bottom: 120px;
   right: 140px;
-  box-shadow: 1px 1px 25px #003552;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 /*Hero form title*/
 .hero-form h3 {
@@ -179,7 +196,20 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10px;
 }
+
+/* update existing rule with this declaration */
+.form-input {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
 /* radio button and check box styling */
 .hero-form label {
   margin: 0 5px;
@@ -191,6 +221,12 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+/* Hover interactivity */
+.hero-form button:hover {
+  background-color: #39a6b2;
 }
 
 form p {
@@ -235,9 +271,13 @@ form p {
   width: 80%;
   border-bottom: 1px solid #39a6b2;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.step:last-child {
+  border-bottom: none;
 }
 
 .step h3 {
@@ -251,14 +291,14 @@ form p {
   font-size: 18px;
 }
 
-.step-info{
+.step-info {
   flex: 2 70%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.step-text{
+.step-text {
   flex: 12;
 }
 
@@ -268,7 +308,7 @@ form p {
   max-width: 100%;
 }
 
-.step-text h4{
+.step-text h4 {
   font-size: 26px;
   line-height: 1.5;
   color: #024e76;
@@ -282,7 +322,6 @@ form p {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 
 .trainer {
   margin: 20px;
@@ -327,7 +366,7 @@ form p {
 .contact-info {
   display: flex;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .contact-info > * {
@@ -366,7 +405,8 @@ form p {
   color: #fce138;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   border: 1px solid #024e76;
   display: block;
   padding: 7px 15px;
@@ -375,6 +415,15 @@ form p {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Focus styling update */
+.contact-form textarea:focus,
+.contact-form input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .contact-form button {
@@ -385,17 +434,22 @@ form p {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+/* Button interactivity */
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
 
-
 /* REACH  OUT STYLES END */
-
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
@@ -413,36 +467,38 @@ form p {
     font-size: 20px;
   }
 
-  footer h2, footer div {
+  footer h2,
+  footer div {
     text-align: center;
     width: 100%;
   }
 
-  .hero{
+  .hero {
     height: 100%;
   }
 
-  .hero-text, .hero-form {
+  .hero-text,
+  .hero-form {
     width: 100%;
   }
-  
+
   .hero-text {
     text-align: center;
   }
 
-  .hero-text h2{
+  .hero-text h2 {
     text-align: center;
   }
 
   .section-title {
     width: 80%;
   }
-  
+
   .trainer {
     flex: 0 70%;
   }
-  
-  .contact-info iframe{
+
+  .contact-info iframe {
     flex: 1 100%;
   }
 }
@@ -472,7 +528,7 @@ form p {
   }
 
   .step-text {
-    flex: 100%;  
+    flex: 100%;
   }
 }
 
@@ -504,5 +560,4 @@ form p {
   .contact-form {
     order: 3;
   }
-  
 }
